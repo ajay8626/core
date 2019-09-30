@@ -1,0 +1,19 @@
+UPDATE `tbllocation`
+SET locationname = CONCAT(UCASE(LEFT(locationname, 1)), 
+                             LCASE(SUBSTRING(locationname, 2))) 
+							 
+							 UPDATE `tbllocation`
+SET locationname =UCFIRST(locationname);
+
+UPDATE tbllocation SET locationname=CONCAT(UCASE(SUBSTRING(locationname, 1, 1)),LCASE(SUBSTRING(locationname, 2)));
+
+
+    13-03-2018 query
+
+    -------------------------------------
+
+     ALTER TABLE `tbluser` ADD `facebookID` VARCHAR(255) NULL AFTER `bio`, ADD `googleID` VARCHAR(255) NOT NULL AFTER `facebookID`, ADD `isSocial` TINYINT NOT NULL DEFAULT '0' AFTER `googleID`;
+       ALTER TABLE `tbluser` CHANGE `isSocial` `isSocial` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '0 for website user, 1 for facebookuser,2 for googleplus';
+ALTER TABLE `tbluser` CHANGE `profile_image` `profile_image` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
+
+ALTER TABLE `tbluser` CHANGE `googleID` `googleID` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL;

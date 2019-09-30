@@ -1,0 +1,1 @@
+SELECT id, name FROM tblcities where state_id=(SELECT id FROM tblstates where country_id='230' ORDER By 'name' ASC)

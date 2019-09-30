@@ -1,0 +1,237 @@
+<?php 
+
+/*
+{"function":"userLogin","username":"testcustomer@gmail.com","password":"admin@123","deviceToken":"asdfadfsadf123123213","deviceType":1}
+
+{
+"function":"userLogin",
+"username":"MimiAlford2851@gmail.com",
+"password":"abbacus007",
+"deviceToken":"asdfadfsadf123123213",
+"deviceType":1
+}
+
+1=customer
+2=cleaner
+*/
+
+/*
+user_type 1=customer
+user_type 2=manager
+user_type 3=cleaner
+*/
+include("../config.php");
+if(isset($rqst_data->function)){
+	$Username = 	isset($rqst_data->username)?stripslashes($rqst_data->username):"";
+	$pass=$rqst_data->password;
+	$Password = 	isset($rqst_data->password)?stripslashes($rqst_data->password):"";
+	//$userType = 	isset($rqst_data->userType)?stripslashes($rqst_data->userType):"";
+	$Password = md5($Password);
+	$DeviceToken = 	isset($rqst_data->deviceToken)?stripslashes($rqst_data->deviceToken):"";
+	$DeviceType = 	isset($rqst_data->deviceType)?stripslashes($rqst_data->deviceType):0;
+	$NotificationAlert = 	isset($rqst_data->notificationAlert)?stripslashes($rqst_data->notificationAlert):1;
+	$my_array=array();
+	$msg='';
+	$IsAvailable=1;
+	//$is_notification=0;
+	$status_array = 1;
+	$user_obj=array();
+	$user_auth_token = 0;
+	$id=0;
+	$email="";
+	$firstname="";
+	$lastname="";
+	$phone=0;
+	$address_1="";
+	$address_2="";
+	$address_3="";
+	$postal_code="";
+	$leads=0;
+	$status="";
+	$user_type='';
+	if($Username != "" && $Password != "" ){
+		
+			$sql="select id,email,firstname,lastname,phone,address_1,address_2,address_3,postal_code,leads,customer_type,status,no_windows,no_doors,no_conservatory from tblcustomers where email ='".$Username."' and password ='".$Password."'";
+			$res=$db->Query($sql);
+			$rows1=mysql_num_rows($res);
+			list($id,$email,$firstname,$lastname,$phone,$address_1,$address_2,$address_3,$postal_code,$leads,$customer_type,$status,$no_windows,$no_doors,$no_conservatory)=mysql_fetch_row($res);
+			$user_auth_token=base64_encode($id.':'.$DeviceToken);
+			$user_type='1';
+			//echo $status;
+			//exit;
+			if($rows1==0)
+			{
+				$sql="select id,firstname,lastname,email,address_1,address_2,phone,status from tblcleaners where email ='".$Username."' and password ='".$Password."'";
+				$res=$db->Query($sql);
+				$rows2=mysql_num_rows($res);
+				list($id,$firstname,$lastname,$email,$address_1,$address_2,$phone,$status)=mysql_fetch_row($res);
+				$user_auth_token=base64_encode($id.':'.$DeviceToken);
+				$user_type='3';
+			}
+			if($rows1==0 && $rows2==0)
+			{
+				
+				$sql="select id,firstname,lastname,phone,email,status from tblmanager where email ='".$Username."' and password ='".$Password."'";
+				$res=$db->Query($sql);
+				$rows3=mysql_num_rows($res);
+				list($id,$firstname,$lastname,$phone,$email,$status)=mysql_fetch_row($res);
+				$user_auth_token=base64_encode($id.':'.$DeviceToken);
+				$user_type='2';
+			}
+		//}
+		
+		    
+			if($status==0 && ($rows1 > 0 || $rows2 > 0 || $rows3 > 0))
+			{
+				$status_array = 0;
+			    $IsAvailable=0;
+				$msg=get_msg("inactive_user")?get_msg("inactive_user"):'Your account is inactive, please contact administrator.';
+				
+			}else if($rows1 > 0 || $rows2 > 0 || $rows3 > 0){
+			$tokensql="select id as tokenid,user_auth_token from tblusertoken where  DeviceToken ='".$DeviceToken."'";
+			//echo $tokensql;
+			//exit;
+			$restoken=$db->Query($tokensql);
+			$rowstoken=mysql_num_rows($restoken);
+			
+			$sqlloyalty="select id from tblloyaltypoints where customer_id=".$id."  and IsRead=0";
+					 $countres=$db->Query($sqlloyalty);
+					 $rowtotalloyal=mysql_num_rows($countres);
+			
+			if($rowstoken == 0){
+				$user_auth_token=base64_encode($id.':'.$DeviceToken);
+				$checkuser_id="select id,user_auth_token from tblusertoken where user_id=".$id." and user_type='".$user_type."'";
+				//echo $checkuser_id;
+				//exit;
+				$chrestoken=$db->Query($checkuser_id);
+			    $chrowstoken=mysql_num_rows($chrestoken);
+				
+				if($chrowstoken > 0)
+				{
+					//echo "123456";
+					$chrecords=mysql_fetch_array($chrestoken);
+					$tokenrcid=$chrecords['id'];
+					//echo $tokenrcid;
+					//exit;
+					$data=array("user_id"=>$id,"user_auth_token"=>$user_auth_token,'device_type'=>$DeviceType,'DeviceToken'=>$DeviceToken,"user_type"=>$user_type);
+					$where ="id = {$tokenrcid}";
+					$db->Update($data,"tblusertoken",$where);
+					
+				}else {
+					//echo "123";
+					//exit;
+					$data = array("user_id"=>$id,"user_auth_token"=>$user_auth_token,'device_type'=>$DeviceType,'DeviceToken'=>$DeviceToken,"user_type"=>$user_type);
+				    $db->Insert($data,"tblusertoken");
+				}
+				
+				
+				
+				if($rows1 > 0){
+					$data=array("devicetype"=>$DeviceType);
+					$where ="id = {$id}";
+					$db->Update($data,"tblcustomers",$where);
+					//customer object
+					/*
+					$lastinvoice=mysql_query("select id,no_windows,no_doors,no_conservatory from tblappointments where customer_id=".$id." order by id desc LIMIT 1");
+					$totalrecords=mysql_num_rows($lastinvoice);
+					$invoiceobj=array();
+					$appointment_id='';
+					$no_windows='';
+					$no_doors='';
+					$no_conservatory='';
+					if($totalrecords > 0)
+					{
+						$invoicede=mysql_fetch_array($lastinvoice);
+						$appointment_id=$invoicede['id'];
+						$no_windows=$invoicede['no_windows'];
+						$no_doors=$invoicede['no_doors'];
+						$no_conservatory=$invoicede['no_conservatory'];
+					}
+					*/
+					$user_obj=array('id'=>(int)$id,'email'=>$email,'firstname'=>$firstname,'lastname'=>$lastname,'phone'=>$phone,'address_1'=>$address_1,'address_2'=>$address_2,'address_3'=>$address_3,'postal_code'=>$postal_code,'leads'=>(int)$leads,'customer_type'=>$customer_type,'user_type'=>1,"loyalityPoints"=>(int)$rowtotalloyal,"password"=>$pass,"appointment_id"=>(int)$appointment_id,"no_windows"=>(int)$no_windows,"no_doors"=>(int)$no_doors,"no_conservatory"=>(int)$no_conservatory);
+				}
+				if($rows2 > 0){
+					$data=array("devicetype"=>$DeviceType);
+					$where ="id = {$id}";
+					$db->Update($data,"tblcleaners",$where);
+					//cleaner object
+					$user_obj=array('id'=>(int)$id,'firstname'=>$firstname,'lastname'=>$lastname,'email'=>$email,'address_1'=>$address_1,'address_2'=>$address_2,'phone'=>$phone,'user_type'=>3,"password"=>$pass);
+				}
+				if($rows3 > 0){
+					$data=array("devicetype"=>$DeviceType);
+					$where ="id = {$id}";
+					$db->Update($data,"tblmanager",$where);
+					//cleaner object
+					$user_obj=array('id'=>(int)$id,'firstname'=>$firstname,'lastname'=>$lastname,'email'=>$email,'phone'=>$phone,'user_type'=>2,"password"=>$pass);
+				}
+			}else{
+				list($tokenid,$user_auth_token)=mysql_fetch_row($restoken);
+				//exit;
+				//echo "123";
+				//exit;
+				$data=array("user_auth_token"=>$user_auth_token,'device_type'=>$DeviceType,'DeviceToken'=>$DeviceToken,"user_type"=>$user_type,"user_id"=>$id);
+					$where ="id = {$tokenid}";
+					$db->Update($data,"tblusertoken",$where);
+				
+				if($rows1 > 0){
+					/*
+					$lastinvoice=mysql_query("select id,no_windows,no_doors,no_conservatory from tblappointments where customer_id=".$id." order by id desc LIMIT 1");
+					$totalrecords=mysql_num_rows($lastinvoice);
+					$invoiceobj=array();
+					$appointment_id='';
+					$no_windows='';
+					$no_doors='';
+					$no_conservatory='';
+					if($totalrecords > 0)
+					{
+						$invoicede=mysql_fetch_array($lastinvoice);
+						$appointment_id=$invoicede['id'];
+						$no_windows=$invoicede['no_windows'];
+						$no_doors=$invoicede['no_doors'];
+						$no_conservatory=$invoicede['no_conservatory'];
+					}
+					*/
+					
+					$user_obj=array('id'=>(int)$id,'email'=>$email,'firstname'=>$firstname,'lastname'=>$lastname,'phone'=>$phone,'address_1'=>$address_1,'address_2'=>$address_2,'address_3'=>$address_3,'postal_code'=>$postal_code,'leads'=>(int)$leads,'customer_type'=>$customer_type,'user_type'=>1,"loyalityPoints"=>(int)$rowtotalloyal,"password"=>$pass,"appointment_id"=>(int)$appointment_id,"no_windows"=>(int)$no_windows,"no_doors"=>(int)$no_doors,"no_conservatory"=>(int)$no_conservatory);
+				}
+				if($rows2 > 0){
+					$user_obj=array('id'=>(int)$id,'firstname'=>$firstname,'lastname'=>$lastname,'email'=>$email,'address_1'=>$address_1,'address_2'=>$address_2,'phone'=>$phone,'user_type'=>3,"password"=>$pass);
+				}
+				if($rows3 > 0){
+					$user_obj=array('id'=>(int)$id,'firstname'=>$firstname,'lastname'=>$lastname,'email'=>$email,'phone'=>$phone,'user_type'=>2,"password"=>$pass);
+				}
+				/*if($DeviceType==1)
+				{
+					 $msg = array(
+		             'body' 	=> 'Body  Of Notification',
+		             'title'	=> 'Title Of Notification',
+             	     'icon'	=> 'myicon',
+              	     'sound' => 'mySound');
+					//$registrationIds='feGSs5k1hkY:APA91bGwSQmXk7tcWE5Vm5PlB3LtsCr7J62WCb63BMOSez6ffPDdgw6-ncBBf1sL4WRoZm6d1MVwJRIZBb281d6Mu6d197HK2DMlvxyp_Wj-NnvL8ggEX19WFOc6P5V8RpeAlSTMn62h';
+					firebasepush($msg,$DeviceToken);
+				}*/
+			}
+			$msg=get_msg("success")?get_msg("success"):'success';	
+		} else{
+			$status_array = 0;
+			$IsAvailable=0;
+			$msg = get_msg("loginfailed")?get_msg("loginfailed"):'loginfailed';
+			$my_array = array("username"=>$Username);
+		}
+	}else{		
+		$msg = get_msg("invalid_login_details")?get_msg("invalid_login_details"):'invalid_login_details';
+		$IsAvailable=0;
+		$status_array = 0;
+	}
+	
+	$otherinfo = array("authenicateId"=>$user_auth_token,'user_obj'=>$user_obj,"isAvailable"=>$IsAvailable);
+	
+	$my_array = array_merge($my_array, $otherinfo);
+	header('Content-type: application/json; charset=utf-8');
+	$final_array = array('result'=>$my_array,"message"=>$msg,'status'=>$status_array);
+	echo $json= json_encode($final_array);
+}else{
+	$final_array = array('result'=>'','status'=>0);
+	echo $json= json_encode($final_array);
+}
+?> 

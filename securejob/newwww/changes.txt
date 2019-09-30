@@ -1,0 +1,85 @@
+order by name category
+job status
+in-progress
+complete
+- all places order by name
+
+course to courses
+- price(pound) symbol
+- remove category from course
+
+- lat,long,address1,address2,postal,city,country remove from courses 
+- add location in course
+- remove course hours
+- change course duration numeric to string
+- add editor in description.
+
+---------------------------------
+
+date format dd/mm/yy
+- remove isfeatured in course
+
+- remove job from job categories
+- location master
+
+ALTER TABLE `tbluser` ADD `customer_type` TINYINT(1) NOT NULL COMMENT '1 for business user,2 for personal user' AFTER `modified_date`;
+
+ALTER TABLE `tbluser` ADD `bank_name` VARCHAR(255) NULL AFTER `customer_type`, ADD `acc_holder_name` VARCHAR(255) NULL AFTER `bank_name`, ADD `sort_code` VARCHAR(255) NULL AFTER `acc_holder_name`, ADD `acc_number` VARCHAR(255) NULL AFTER `sort_code`, ADD `reg_no` VARCHAR(255) NULL AFTER `acc_number`, ADD `reg_vat_no` VARCHAR(255) NULL AFTER `reg_no`;
+
+ALTER TABLE `tbluser` ADD `company_name` VARCHAR(255) NULL AFTER `reg_vat_no`;
+
+-------------------------------------------------------------------------------
+-08-02-2018
+
+- forgot password email - working - done 
+- user in all validation fields - done
+- category link direct - done
+- all the price (pound) in course,job - done
+- course days to course duration - done
+
+Advert
+ remove desc,isfeature - done
+
+- cms order by name  - done
+- location first letter capital
+- remove city,state - done
+
+Jobs
+
+remove job user
+- remove add new job
+
+press multiple msg in category and tags
+Penning
+Price to Proposed Amount
+- Change
+  job image upload 
+
+- job add form  as per Invision App  
+
+ALTER TABLE `tbljobs` ADD `job_location` VARCHAR(255) NULL AFTER `opening_position`, ADD `opening_type` TINYINT(1) NULL COMMENT '1 for Single,2 for Multiple' AFTER `job_location`;
+
+ALTER TABLE `tbljobs` ADD `duration_in` INT(11) NULL AFTER `opening_type`;
+
+ALTER TABLE `tbljobs` CHANGE `job_days` `job_days` VARCHAR(255) NOT NULL;
+----------------------------------------------------------------
+
+Dashboard
+
+- latest 5 jobs
+
+-------------
+view bids
+
+- add job droptdown
+- change dropdown
+----------------------------------------------------------------
+
+- all the places numeric will be right side  - done
+- add 5 jobs,users live
+- add job bids
+- job status master - done
+- couponcode master
+
+  fromdate,todate,couponcode,couponcode type,amount,status 
+  

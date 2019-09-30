@@ -1,0 +1,310 @@
+<?php 
+//session_start();
+include 'config.php'; 
+unset($_SESSION['home_name']);
+unset($_SESSION['home_email']);
+unset($_SESSION['home_jobtype']);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#cf2027">
+<meta name="msapplication-navbutton-color" content="#cf2027">
+<meta name="apple-mobile-web-app-status-bar-style" content="#cf2027">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<title>SECURE THAT JOB</title>
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700,800" rel="stylesheet"> 
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/ddsmoothmenu.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="fonts/font-awesome.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/at-jquery.js"></script>
+
+</head>
+ <body>
+
+<!--personal-user--->
+  <div class="container">
+     <div class="dasbrod-bg business-user">
+	      <div class="row">
+		       <div class="col-md-4 col-sm-6 dasbrod-row">
+			       <div class="border-box">
+				        <div class="my-job">
+						     <div class="dasbrod-title">
+							      <h2>my jobs</h2>
+							 </div>
+							 <div class="comn-list">
+							     <div class="list-row">
+									 <div class="title"><span>JOB INVITES</span></div>
+									 <div class="numbar">12</div>
+								 </div>
+								 <div class="list-row">
+									 <div class="title"><span>ACTIVE JOBS</span></div>
+									 <div class="numbar">2</div>
+								 </div>
+								  <div class="list-row">
+									 <div class="title"><span>JOBS COMPLETED</span></div>
+									 <div class="numbar">8<span><a href="#">(1NEW)</a></span></div>
+								 </div>
+                                 <div class="list-row">
+                                     <div class="box-color">
+									 <div class="title"><span>JOBS CREATED</span></div>
+                                     </div>
+									 <div class="numbar">3</div>
+								 </div>
+								 
+							 </div>
+														 
+						</div>
+						
+						<div class="bird">
+						     <div class="dasbrod-title">
+							      <h2>BIDS</h2>
+							 </div>
+							  <div class="comn-list">
+								  <div class="list-row">
+										 <div class="title"><span>ON GOING BIDS</span></div>
+										 <div class="numbar">12</div>
+								  </div>
+								  <div class="list-row">
+										 <div class="title"><span>LOST BIDS</span></div>
+										 <div class="numbar">2</div>
+								  </div>
+								   <div class="list-row">
+										 <div class="title"><span>WINNING BIDS</span></div>
+										 <div class="numbar">8<span><a href="#">(3NEW)</a></span></div>
+								  </div>
+								  <div class="list-row">
+										 <div class="title"><span>ACCEPTED BIDS</span></div>
+										 <div class="numbar">2<span></div>
+								  </div>
+							  </div>
+						</div>
+						
+			   </div>
+			      </div>
+			   
+			   <div class="col-md-4 col-sm-6 dasbrod-row">
+                   <div class="border-box">
+				       <div class="location">
+					        <div class="dasbrod-title">
+						        <h2>LOCATION</h2>
+					         </div>
+							 <ul>
+							 <li><span>SET LOCATION</span><input type="text" name="firstname" required="" class="txt_cnt"></li>
+							 <li><span>SET RADIUS</span><input type="text" name="firstname" required="" class="txt_cnt"></li>
+							 </ul>
+							 <form class="select">
+							       <span>Lorem Ipsum is simply</span>
+								  <select name="cars">
+									<option value="volvo">Volvo</option>
+									<option value="saab">Saab</option>
+									<option value="fiat">Fiat</option>
+									<option value="audi">Audi</option>
+								  </select>
+							</form>
+							<div class="stj_sort">
+								<div class="srch_dv">
+                    				<input type="text" name="srh_newjobs" id="srh_newjobs" class="txt_srch" placeholder="Search">
+                    				<input type="button" class="btn_srch" id="new_srch" value="Go">
+                    			</div>
+						   </div>
+						   <div class="map">
+								 <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="100" frameborder="0" style="border:0"></iframe>
+						    </div>
+					   </div>
+				   </div>
+			   </div>
+			   
+			   
+			   <div class="col-md-4 col-sm-6 dasbrod-row">
+			     <div class="border-box">
+				      <div class="messages">
+					      <div class="dasbrod-title">
+						        <h2>MESSAGES</h2>
+					       </div>
+				
+					   <div class="comn-list">
+						   <div class="list-row">
+						         <div class="box-color">
+									<div class="title"><span>MESSAGES</span></div>
+									<div class="numbar">5<span><a href="#">(2NEW)</a></span></div>
+								</div>
+							</div>
+							 <div class="list-row">
+						         <div class="box-color">
+									<div class="title"><span>ALL NOTIFICATIONS</span></div>
+									<div class="numbar">5<span><a href="#">(6NEW)</a></span></div>
+								</div>
+							</div>
+					   </div>
+					   <div class="clear"></div>
+					   
+					   	<div class="dasbrod-title">
+						      <h2>PROFILE </h2>
+					     </div>
+						 <ul class="profile-btn">
+							  <li><a href="#">VIEW PROFILE</a></li>
+							  <li><a href="#">EDIT PROFILE EDIT</a></li>
+							  <li><a href="#">EDIT RATE CARD</a></li>
+						 </ul>
+						 <div class="comn-list profile-row">
+						     <div class="list-row">
+							     <div class="title"><span>ALL NOTIFICATIONS</span></div>
+								  <div class="numbar">5</div>
+							 </div>
+							 <div class="list-row">
+							     <div class="title"><span>REFERAL CODE</span></div>
+								  <div class="numbar"><b>QB34STJ</b></div>
+							 </div>
+							 <div class="list-row">
+							     <div class="title"><span>VERIFIED ACCOUNT?</span></div>
+								  <div class="numbar">
+								       <div class="btn-box">
+									   <ul>
+									       <li><a href="#"><img src="images/close-icons.jpg"></a></li>
+										   <li><a href="#"><img src="images/rt-icons.jpg"></a></li>
+										</ul>  
+									   </div>
+								  </div>
+							 </div>
+						 </div>
+					   
+					 </div>
+				  </div>
+			   </div>
+			   
+			   
+			    <div class="col-md-4 col-sm-6 dasbrod-row">
+				         <div class="border-box">
+						       <div class="bank">
+							        <div class="dasbrod-title">
+						                 <h2>BANK</h2>
+					                  </div>
+									  
+									     <div class="comn-list">
+											   <div class="list-row">
+													 <div class="box-color">
+														<div class="title"><span>PENDING PAYMENTS</span></div>
+												     </div>	
+													<div class="numbar"><span class="price">£</span>280.00</div>
+												</div>
+												 <div class="list-row">
+														<div class="title"><span>PAID THIS WEEK</span></div>
+														<div class="numbar"><span class="price">£</span>670.00</div>
+												</div>
+												 <div class="list-row">
+														<div class="title"><span>PAID THIS MONTH</span></div>
+														<div class="numbar"><span class="price">£</span>2,200.00</div>
+												</div>
+												 <div class="list-row">
+														<div class="title"><span>TOTAL PAY</span></div>
+														<div class="numbar"><span class="price">£</span>4,400.00</div>
+												</div>
+												 <div class="list-row">
+														<div class="title"><span>CREDITS</span></div>
+														<div class="numbar">48</div>
+												</div>
+												
+												 
+										 </div>
+							   </div>
+						 </div>
+				 </div>
+				 
+				 
+				     <div class="col-md-4 col-sm-6 dasbrod-row">
+				         <div class="border-box">
+						       <div class="search">
+							        <div class="dasbrod-title">
+						                 <h2>SEARCH CANDIDATES</h2>
+					                 </div>
+									  <div class="comn-list">
+									        <div class="list-row">
+											     <div class="box-color">
+												     <div class="title"><span>SEARCH CANDIDATES</span></div>
+												 </div>
+											</div>
+											<div class="list-row">
+											     <div class="box-color">
+												     <div class="title"><span>REQUESTED/INVITES</span></div>
+													 <div class="numbar">4<span><a href="#">(1NEW)</a></span></div>
+												 </div>
+											</div>
+											<div class="list-row">
+											     <div class="box-color">
+												     <div class="title"><span>CONFIRMED</span></div>
+												 </div>
+											</div>
+										 <div class="list-row">
+											     <div class="box-color">
+												     <div class="title"><span>VIEW FAVOURITES (WATCHLIST)</span></div>
+												 </div>
+											</div>
+									  </div>
+
+									  								
+							   </div>
+						 </div>
+				 </div>
+				 
+				 				     <div class="col-md-4 col-sm-6 dasbrod-row">
+				         <div class="border-box">
+						       <div class="reviews">
+							        <div class="dasbrod-title">
+						                 <h2>REVIEWS &RATINGS</h2>
+					                 </div>	
+                                     <div class="comn-list">
+									      <div class="list-row">
+										      <div class="title"><span>MYJOBS AWAITING REVIEW</span></div>
+											   <div class="numbar">3</div>
+										  </div>
+										   <div class="list-row">
+											 <div class="box-color">
+														<div class="title"><span>LEAVE FEEDBACK</span></div>
+												</div>
+											</div>
+											 <div class="list-row">
+											 <div class="box-color">
+														<div class="title"><span>MY REVIEWS</span></div>
+												</div>
+											</div>
+											 <div class="list-row">
+											 <div class="box-color">
+														<div class="title"><span>MY RATINGS</span></div>
+												</div>
+											</div>
+										<div class="list-row">
+										      <div class="title"><span>CURRENT RATING</span></div>
+											   <div class="star numbar">
+											         <span class="fa fa-star checked"></span>
+												     <span class="fa fa-star checked"></span>
+													 <span class="fa fa-star checked"></span>
+													 <span class="fa fa-star-o"></span>
+													 <span class="fa fa-star-o"></span>
+												</div>
+										  </div>
+                                     </div>											  
+							   </div>
+						 </div>
+				 </div>
+			   
+
+			   
+		  </div>
+	 </div>
+  </div>
+<!--personal-user and--->
+
+
+ </body>
+
+</html>

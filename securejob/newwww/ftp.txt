@@ -1,0 +1,17 @@
+74.63.251.202
+securejob
+$eCuWr#234
+
+\\server-abbacus\Designers-18-03\secureThatJob\html
+
+http://phpmyadmin.reviewfy.com/index.php
+
+
+
+
+select * from tblschedule where where job_id=22 and user_id=29
+
+file://///server-abbacus/Designers-18-03/secureThatJob/html/review-feedback.html
+
+
+tblratting

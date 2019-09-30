@@ -1,0 +1,34 @@
+- forgot password email - working
+
+- user in all validation fields
+
+- category link direct
+- all the price (pound) in course,job
+- course days to course duration
+
+Advert
+ remove desc,isfeature
+
+- cms order by name 
+- location first letter capital
+- remove city,state
+
+Jobs
+
+remove job user
+- remove add new job
+
+press multiple msg in category and tags
+Penning
+Price to Proposed Amount
+- Change
+  job image upload 
+
+- job add form  as per Invision App  
+  
+
+ 
+
+
+
+

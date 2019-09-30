@@ -1,0 +1,8 @@
+
+#calendar {
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 20px;
+}
+
+#calendar .fc-content { padding: 7px 5px; }

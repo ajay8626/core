@@ -1,0 +1,197 @@
+
+
+Substitutes
+
+Extra Category - Done
+Bailiff 
+Drone Flyers
+
+Searches
+Search for operative within area
+Same Fields As ebay
+
+Been member for 4years 3months (similar to eBay & Forums)
+
+Block certain contact details for privacy
+Only on active jobs
+Same as SIA info
+
+Share buttons
+
+Feedback compulsory to make users post feedback about each other
+
+GDPR
+
+Languages (All European incl) - Done
+Polish
+Greek
+Turkish
+Russian
+Albanian
+French
+German
+Italian
+Spanish
+African
+
+Paypal 3.4% +20p
+Who takes the hit?
+Preferably the Job Poster
+
+Feedback page to email ways to improve Secure That Job site
+
+Courses anyone can post either the Job Searcher or the Job Poster
+Sian’s Notes: 
+
+With GDPR client is going to provide a new policy to put in as they are going to start using body cameras on all security staff. 
+
+Homepage
+
+Images and text on homepage may need changing - client would like everything bigger like banner on current homepage the wording is in your face: http://securethatjob.com/
+
+So please make certain text like The UK’s leading security supermarket bigger - perhaps take out the black behind? and Job . Search . Work that needs to be made bigger. 
+
+Are you looking for…. made more like their current site… I Need A Job. I Need Security http://securethatjob.com/
+
+Admin
+
+Do we have a backup of the old users? As client is concerned more people are signing up each day and he will need to arrange an email to go out to all of those current registered users to say that the website has been updated and to sign up again if they would like to use the service. 
+
+Search
+
+We need more filters in the search section so please look at eBay and use as many filters as possible. Such as being able to search by counties, by job type, price, by radius of that county or of your postcode etc. 
+
+When searching it needs to be a default search of your postcode not the users town as I could live on the outskirts of Northampton but be closer to the town of Wellingborough if that makes sense… so if I had a search of 5mile radius from where I am it would pick up jobs in Northampton and Wellingborough. 
+
+Courses
+
+With the courses this is for anyone to use to add courses across the country. So instead of posting a job the job poster could post a course which job searchers can apply to. 
+
+Again similar filters to be used on this page similar to Search and eBay. 
+
+Languages - Done
+
+Languages have been mentioned so could you please add any languages that are missing from the list the client has provided above. 
+
+Google Translate
+
+Google Translate is causing an issue with the dates - please look into this. 
+
+Login / Registration
+
+Two Login’s - Job Poster / Job Searcher
+
+Are the two logins needed? What differentiates the two when you are logged in? Thinking back to eBay you have one login and then with that you can either buy or sell?
+
+Paypal Payments
+
+- Commission 
+
+Secure That Job receives a commission of 7.5% from the Job Poster… so if he has a job worth £100 then Secure that Job will receive £7.50. Has this been set up correctly within the chain payments?
+
+- Paypal Fee’s
+
+The other fee’s from Paypal of 3.4% and 20p this should be charged to the Job Poster so has this been set up correctly?
+
+Credits
+
+Have credits been set up correctly now? Client tested this and it did not work correctly. We tested this and we were able to buy credits through paypal sandbox account. How do the credits work?
+
+Active Users
+
+Active users show their name, email and phone number. There needs to be some privacy in place here. Their email and phone number should not show unless they have won a job which is when it is released. A bit like eBay again you cannot see the same and address of your buyer until they have paid and won the item. 
+
+Tattoo’s and piercings - these should be separate questions. We need to review the information on here - Perhaps discuss this with Michael. 
+
+Date of Birth to show as age in profile so if the user enters 1/6/96 then this will show as 22 years old in their profile. - Done
+
+SIA number to show as 4 fields of 4 to enter numbers into so a bit like on some credit card info you can add your long number into 4 fields of 4 boxes. SIA number not to be visible as this is private data but can be released to the Job Poster if they win the job. 
+
+Video
+
+Uploading an MP4 video didn’t work - can you please look into this. - Done 
+
+Bank Details
+
+Please remove bank details - client is only using Paypal so user can enter paypal ID. - Done
+
+Job Poster Login - New Requests
+
+Change New Requests to Find Candidate  - Done
+
+Profile 
+
+Rate card - remove any empty values that may appear as no to the answer. 
+
+Availability calendar - for the user to enter dates and times they are available - similar to Squeegee calendar but better so I could say I am free Monday to Friday 9am - 6pm and if a job poster searched for me I could fit the criteria of a job they have. 
+
+Post a Job
+
+Similar to the above posting a job we could have a calendar with the dates and times of that job which job searchers could view. 
+
+Also to work with a filter so that those jobs would appear with the correct dates or times the job searcher has searched for. 
+
+Post a job page needs redesigning. 
+
+Costs to stand out more. 
+
+Image not so big on the page. 
+
+Location and job description to come first and be bigger. 
+
+How many views has this job had - like eBay. 
+
+Key information to show first such as:
+
+- Dress code
+- Location
+- Risk
+
+Social Sharing 
+
+Can we please add social sharing to Facebook - Twitter etc. 
+
+Featured Jobs
+
+Featured jobs to appear at the top of the list. 
+
+Testing 
+
+We need to test bidding for a job and win - make sure it all works and to also test the chain payments to make sure they work. 
+
+Substitutes
+
+Allowing for substitutes to apply so that if someone drops out they have a back up person. 
+
+A substitute could have an availability calendar so that a job poster can contact them if needed. 
+
+There needs to be a limit of so many substitutes per job. 
+
+An incentive such as a bonus for putting themselves forward. 
+
+To be able to book them in and then they cannot pull out within 48hours of the job. Again a bit like squeegee. 
+
+Categories
+
+Add: - Done
+
+Bailiff 
+Drone Flyers
+
+Candidate Search 
+
+Been a member since 2017 
+
+Reviews to go on their profile 
+
+Like eBay. 
+
+Reviews
+
+Criteria for reviews:
+
+Punctuality
+Presentation
+Attitude to Work
+Communication 
+Overall Calculation 

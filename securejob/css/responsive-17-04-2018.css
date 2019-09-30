@@ -1,0 +1,277 @@
+@media (max-width: 1599px) {
+	.guard img{max-width: 350px;}
+	.jobwrap .col1 .secjob{width:660px;}
+	.jobwrap .col2 .joindetail{width:660px}
+	.abtleft .abtcnt{width:660px;padding: 25px 15px 15px}
+	.abtleft .abtcnt h3{margin-bottom: 13px;}
+	.securewrap .sec_cnt{padding-top: 37px;}
+	.slogan .bannerleft h3{font-size:80px;}
+	.slogan .bannerleft h4{font-size:46px;}
+	.slogan .bannerleft .captiontext{font-size:13px;}
+	.slogan .rgt_frm{padding:30px 32px 15px}
+	.jobwrap .col1 .secjob h2{font-size:60px;}
+	.jobwrap .col2 .joindetail > ul > li .jcnt h3{font-size:29px;}
+	h3{font-size:29px;}
+	p{font-size:18px;line-height: 28px;}
+	.joinwrap p{font-size:18px;line-height: 28px;}
+	.joinwrap h4{font-size:15px;}
+	.joinwrap h2{font-size:40px;}
+	.securewrap .sec_cnt .subtxt h4{font-size: 25px;}
+	.header .loginlik a{padding:29px 53px;}
+	.main_menu > ul > li{margin:0 26px;}
+	.stj_job_list ul li .stj_jl_dtl { width: 320px;}
+	.stj_job_list ul li .stj_jl_rgt { width: 280px;}
+	.stj_contact_dv .stj_cnt_form {  width: 70%;}
+	.stj_contact_dv .stj_cnt_form ul li {  margin: 0 5% 18px 0;  width: 47.5%;}
+	.stj_contact_dv .stj_cnt_dtl {  padding: 0 0 0 3%;  width: 27%;}
+	.crs_list ul li .crs_list_lft { width: 20%;}
+	.crs_list ul li .crs_list_rgt { width: 77%;}
+	.crs_list ul li .crs_list_rgt .crs_lr_lft {  width: 50%;}
+	.crs_list ul li .crs_list_rgt .crs_lr_rgt { width: 30%;}
+	.stj_bid_top .stj_bdt_lft {  width: 78%;}
+	.stj_bid_top .stj_bdt_rgt {  width: 20%;}
+	.stj_bid_top .stj_bdt_lft .stj_bid_slider {  width: 60%;}
+	.stj_bid_top .stj_bdt_lft .stj_bid_side_con {  width: 36%;}
+	}
+@media (max-width: 1350px){ 
+	.jobwrap .col1 .secjob,.jobwrap .col2 .joindetail,.abtleft .abtcnt{width:600px;}
+	.stj_job_list ul li .stj_jl_img {  margin: 0 3% 0 0;  width: 16%;}
+	.stj_job_list ul li .stj_jl_dtl { width: 42%;}
+	.stj_job_list ul li .stj_jl_rgt {  width: 37%;}
+	.stj_jb_inr .tabs li a {  font-size: 14px;}
+}
+
+ 
+@media (max-width: 1249px){ 
+.lines-button { display:block; }
+.navigation {float:right;margin-right: 60px;}
+.main_menu{display: none}
+	.header .container{position: relative}
+	.header .logo{margin:11px 0;}
+	.header .loginlik a {padding: 21px 50px;}
+	.header .selectdrpdwn {padding: 23px 24px 20px;}
+	.lines-button{right:16px;top: 5px;}
+	.header{z-index: 999;position: relative}
+	.home_bnr{min-height: 320px;}
+	.slogan .bannerleft h3{font-size: 46px;}
+	.slogan .bannerleft h4{font-size: 34px;}
+	.slogan .bannerleft .captiontext{font-size:12px;padding: 3px 13px}
+	.slogan .bannerleft{width:48%;}
+	.slogan .rgt_frm{width:45%;margin-top: 30px;}
+	.guard{display: none}
+	.slogan .bannerleft .wrk ul li{font-size:20px;}
+	.slogan .bannerleft .wrk{margin-top:20px;}
+	.slogan .rgt_frm h3{font-size:20px;}
+	.slogan .rgt_frm{padding:20px;padding-bottom: 3px;}
+	.slogan .rgt_frm ul li input.textbox{padding:9px 15px;font-size: 16px;}
+	.slogan .rgt_frm ul li .submit_btn{margin-top:0;padding: 8px 0}
+	.jobwrap .col1 .secjob,.jobwrap .col2 .joindetail,.abtleft .abtcnt{width:480px;}
+	.jobwrap .col1 .secjob h2{font-size:50px;}
+	.jobwrap .col2 .joindetail > ul > li{margin-top:40px;}
+	.joinwrap{padding: 45px 0}
+	.joinwrap .joinbtn .learnmore{font-size:15px;}
+	.securewrap .sec_cnt{width:100%}
+	.securewrap{background: none !important}
+	.footer .footermenu ul li{margin-left:22px;}
+	.footer .footermenu ul li a,.footer .copyright{font-size:13px;}
+	.footer{padding:6px 0}
+	.stj_job_list ul li .stj_jl_rgt .bid_start {  position: static;  float: left;  width: 100%;  margin: 10px 0 0;}
+	.stj_filter_inn .stj_ctg ul li label { font-size: 10px;}
+	.stj_filter_inn .stj_ctg ul li label.chk_lb { background-size: 12px auto;}
+	.stj_sort .srch_dv {  width: 100%;  margin: 20px 0 0;}
+	.stj_sort .srch_dv .txt_srch {  width: 90%;}
+	.stj_sort .srch_dv .btn_srch { width: 10%;}
+	.bp_wrap {  padding: 30px 15px 74px;}
+	.ip_wrap .ip_avail h3 { font-size: 11px;}
+	.ip_wrap .ip_avail h3 a {  font-size: 10px;}
+	.stj_login_wrap { padding: 30px 15px;}
+	.stj_login_wrap .login_dv .lg_dv_rgt ul { padding: 0;}
+	.stj_login_wrap .login_dv .lg_dv_rgt ul li .rd_lb {margin: 0 20px 0 0;} 
+	.stj_login_wrap .login_dv .lg_dv_lft { padding-right: 30px;}
+	.stj_login_wrap .login_dv .lg_dv_rgt { padding-left: 30px;}
+	.stj_login_wrap.stj_reg_wrap {  padding: 30px 15px;}
+	/*..14.4.18..*/
+	.newrequest ul li .leftimg{width:29%;margin-right: 15px;}
+	.newrequest ul li .rqstmain{padding:15px;}
+	.newrequest ul li .rgtcnt h2{font-size:18px;}
+	.newrequest ul li .addwsh i{font-size:20px;}
+	.newrequest ul li .addwsh{top:15px;right:15px;}
+	.stj_bid_btm {  width: 100%;}
+	.stj_bid_top .stj_bid_descp{ padding: 0;}
+}
+
+@media (max-width: 991px) { 
+	.slogan .bannerleft{margin-top:40px}
+	.slogan .rgt_frm {padding: 15px 15px 0;margin-top: 15px;}
+	.slogan .rgt_frm h3 {font-size: 16px;margin-bottom: 8px;}
+	.slogan .rgt_frm .radio label {font-size: 16px;}
+	.slogan .rgt_frm ul{font-size:10px;margin-top: 10px;}
+	.slogan .rgt_frm ul li input.textbox {font-size: 14px;padding: 5px 15px;}
+	.slogan .rgt_frm ul li .submit_btn {font-size: 16px;margin-top: 0; padding: 4px 0;}
+	.home_bnr{min-height: 250px;}
+	.jobwrap .col1{width:100%}
+	.jobwrap .col1 .secjob, .jobwrap .col2 .joindetail, .abtleft .abtcnt{width:100%;padding: 30px 20px}
+	.jobwrap .col1 .secjob h2{font-size:30px}
+	.jobwrap .col2{width:100%}
+	.jobwrap .col2 .joindetail > ul > li .icnwrap{margin-left:0;border:1px solid #505677;margin-right: 20px;}
+	.jobwrap .col2 .joindetail > ul > li{margin-top: 11px;}
+	.abtleft{width:100%;}
+	.abtrgt{width:100%}
+	.securewrap .sec_cnt{padding:30px 0}
+	h3{font-size:23px;}
+	.securewrap .sec_cnt .subtxt h4{font-size:20px}
+	.securewrap .sec_cnt .subtxt{margin-top:10px;}
+	.footer .flogo{width:100%;text-align: center;margin-top: 10px;}
+	.footer .footermenu{width:100%;text-align: center}
+	.footer .footermenu ul li{display:inline-block;margin: 0 5px;float: none;}
+	.footer .footermenu ul li a, .footer .copyright{text-align: center}
+	.footer .social{text-align: center}
+	.joinwrap h2{font-size:30px;}
+	.header .loginlik a{padding: 21px 35px;}
+	.joinwrap{padding:25px 0;}
+	.stj_filter {  margin: 0 0 30px;}
+	.stj_brc ul li {  margin: 0 1% 20px;  width: 31.33%;}
+	.stj_about_inn {  margin-bottom: 40px;}
+	.stj_abt_wrap { padding: 30px 0 10px;}
+	.stj_cnt_inn { margin: 0 0 40px;}
+	.stj_cnt_wrap { padding: 30px 0;}
+	.stj_abt_wrap.stj_faq_wrap { padding-bottom: 30px;}
+	.bp_dv_dtl .bp_dv_lftdtl .bp_crd .bp_crd_dtl span { line-height: 53px; font-size: 40px;}
+	.bp_dv_dtl .bp_dv_lftdtl .bp_crd .bp_crd_dtl {  font-size: 12px;}
+	.bp_dv_dtl .bp_dv_lftdtl .bp_code span {  font-size: 25px;}
+	.ip_wrap .ip_avail h3 a {  margin: 5px 0;  width: 100%;}
+	.stj_login_wrap .login_dv { padding: 30px;}
+	.stj_login_wrap .login_dv .lg_dv_rgt ul li .rd_lb {  margin: 10px 20px 0 0;  width: 100%;}
+	
+	/**/
+	.jobdetail .jobleft,.jobdetail .jobright{padding-left:30px;padding-right:30px; }
+	.jobdetail ul.jobtab li a{font-size:16px;}
+	.jobdetail ul.jobtab li.active a::after {border-top: 30px solid transparent;border-bottom: 31px solid transparent;border-left: 31px solid #313131;}
+	.bid_table table td:last-child {  width: auto;}
+	.bid_table table th:last-child {  width: auto;}
+	.bid_table table td {  padding: 9px 10px;}
+	.bid_table table th {  padding: 9px 10px;}
+	.stj_bid_top .stj_bdt_rgt {  width: 100%; margin-bottom: 20px;}
+	.stj_bid_top .stj_bdt_lft {  width: 100%;}
+	.bid_pop_wrap{width:100%;}
+	.bpw_inner{padding: 0 15px;}
+}
+
+@media (max-width: 767px) {  
+	.logo{width:190px;}
+	.navigation{margin-left:0;margin-right: 0;float:left}
+	.header .loginlik a {font-size: 13px; font-weight: 400; padding: 6px 13px;}
+	.header .selectdrpdwn select{font-size:13px;}
+	.header .selectdrpdwn {padding: 6px 9px 6px;}
+	.header{padding-bottom:10px;}
+	.lines-button{top:51px;}
+	.header .logo{width:100%;text-align: center}
+	.header .logo img{display: inline}
+	.navigation{border:none;width: 100%}
+	.mean-nav{right:0;top: 41px}
+	.home_bnr{min-height:100px}
+	.loader{display: none}
+	.slogan{position:relative;background: #E8E8E8;padding-bottom: 20px;}
+	.slogan .bannerleft{width:100%;margin-top: 15px;}
+	.slogan .bannerleft h3{color:#000}
+		.slogan .rgt_frm{width:100%;max-width: 100%}
+	.slogan .bannerleft .wrk ul li{color:#000}
+	.slogan .bannerleft h3{font-size: 26px;}
+	.slogan .bannerleft h4{font-size:20px;margin-bottom: 15px;color:#000}
+	.slogan .bannerleft .wrk{margin-top: 8px;}
+	.slogan .bannerleft .wrk ul li{font-size:15px;}
+	.jobwrap .col2 .joindetail > ul > li .icnwrap{width:70px;line-height: 70px;height: 70px;}
+	.jobwrap .col2 .joindetail > ul > li .jcnt h3{font-size:23px;margin-top:5px}
+p,.joinwrap p,.securewrap .sec_cnt .subtxt p{font-size:16px;line-height: 26px}
+	.jobwrap .col2 .joindetail .btn{font-size:14px;}
+	.abtleft .abtcnt {padding-top:0}
+	.jobwrap .col2 .joindetail > ul > li{margin-top:20px;}
+	.joinwrap ul.joinlist li{width:50%;margin-bottom: 15px;}
+	.joinwrap ul.joinlist li:nth-child(2n+1){clear:both}
+	.securewrap .sec_cnt .subtxt {margin-top: 0; margin-bottom: 20px; float: left; width: 100%;}
+	.joinwrap .joinbtn{margin-top:10px;}
+	.joinwrap ul.joinlist{margin-left: -15px;margin-right: -15px;}
+	.joinwrap h2{font-size:27px;}
+	.stj_jb_inr .tabs li { width: 100%;}
+	.stj_sort .sort_ul {  width: 100%;}
+	.stj_sort .sort_ul li {  margin: 0 0 10px 0;  width: 100%;  text-align: center;}
+	.stj_sort .sort_ul li a{width: 100%; }
+	.stj_sort .sort_ul li label{width: 100%; }
+	.stj_job_list ul li { padding: 20px 20px;}
+	.stj_job_list ul li .stj_jl_img {  margin: 0 0 20px;  width: 100%;}
+	.stj_job_list ul li .stj_jl_dtl {  width: 100%;  margin: 0 0 10px;}
+	.stj_job_list ul li .stj_jl_rgt {  width: 100%;}
+	.stj_job_list ul li .stj_jl_rgt .a_pyb { width: 100%; text-align: center;}
+	.stj_loader {  font-size: 20px;  margin: 0 0 30px;}
+	.stj_brc ul li {  margin: 0 0 20px;  width: 100%;}
+	.stj_contact_dv .stj_cnt_form {  width: 100%;}
+	.stj_contact_dv .stj_cnt_form ul li .btn_cnt {  padding: 6px 20px;  width: 100%;}
+	.stj_contact_dv .stj_cnt_dtl {  padding: 20px 0 0;  width: 100%;  border-top: 1px solid #e7e7e7;  border-left: none;  margin: 13px 0 0; min-height: inherit;}
+	.stj_map iframe { height: 300px;}
+	.faq_points .faq_accordian .faq_accordian_inn .submenuheader { font-size: 12px;}
+	.faq_points .faq_accordian .faq_accordian_inn .submenu p {  font-size: 12px;  line-height: 19px;}
+	.bp_dv .bp_dv_bnr .bp_pf_img {  width: 60px;}
+	.bp_dv .bp_dv_bnr h2 { font-size: 20px;}
+	.bp_dv .bp_dv_bnr { padding: 10px 0;}
+	.bp_dv .bp_dv_bnr .a_logout {  font-size: 15px;  padding: 2px 0 2px 22px;  right: 10px;  top: 7px;  background-size: 14px auto;}
+	.bp_wrap {  padding: 30px 15px;}
+	.bp_dv_dtl .bp_dv_lftdtl {  width: 100%;}
+	.bp_dv_dtl .bp_dv_rgtdtl {  border-left: medium none;  width: 100%;}
+	.bp_jobs_link li {  border-right: medium none;  width: 100%;}
+	.bp_jobs_dtl { padding: 29px 15px 18px;}
+	.bp_jobs_dtl .bank_dtl .a_edb { right: 0; top: -2px;}
+	.ip_profile .ip_prf_lft {  width: 100%;}
+	.ip_profile .ip_prf_rgt {  width: 100%;}
+	.ip_profile .ip_prf_rgt .ip_pr_hdr h2 { width: 100%;}
+	.ip_profile .ip_prf_rgt .ip_pr_hdr { padding: 10px 20px 0;height: auto;}
+	.ip_profile .ip_prf_rgt .ip_pr_hdr .a_lot{ position: static; float: left; width: 100%; margin: 10px 0;}
+	.ip_wrap .bp_jobs_dtl .bank_dtl ul li .srch_prf { width: 100%;}
+	.ip_wrap .bp_jobs_dtl .bank_dtl.prsnl_dtl .a_edb {  float: left;  margin: 0 0 10px;  position: static;  width: 100%;}
+	.crs_list ul li { padding: 20px;}
+	.crs_list ul li .crs_list_lft { width: 100%;}
+	.crs_list ul li .crs_list_rgt {  width: 100%;  margin: 20px 0 0;}
+	.crs_list ul li .crs_list_rgt .crs_lr_lft {  width: 100%;}
+	.crs_list ul li .crs_list_rgt .crs_lr_rgt {  width: 100%;}
+	.stj_login_wrap .login_dv .lg_dv_lft {  border-bottom: 1px solid #cccccc;  border-right: medium none;  padding: 0 0 20px;  width: 100%;}
+	.stj_login_wrap .login_dv .lg_dv_rgt {  padding-left: 0;  width: 100%; margin-top: 20px;}
+	.stj_login_wrap .login_dv .lg_dv_lft ul li .btn_lg { margin: 10px 0 0;  width: 100%;}
+	.stj_login_wrap .login_dv .lg_dv_rgt ul li .btn_lg { margin: 10px 0 0;  width: 100%;}
+	.reg_dv .reg_cd h3 { padding: 0 0 0 33px;}
+	.reg_dv .reg_cd ul li {  border-right: none;  float: left;  margin: 0 0 14px;  min-height: inherit;  padding: 0 !important;  width: 100%;}
+	.reg_dv .reg_cd .reg_ul { padding: 0;}
+	.reg_dv .reg_cd ul li .btn_lg { margin: 13px 0 0; width: 100%;}
+	
+	/**/
+	.jobdetail {display:inherit}
+	.jobdetail .jobleft{width: 100%;display: inherit}
+	.jobdetail .nextbtn{padding-right:15px;padding-bottom: 15px;}
+	.jobdetail ul.jobtab li{width:100%}
+	.jobdetail ul.jobtab li a:after{display:none}
+	.jobdetail .jobleft{padding:0 15px;}
+	.jobdetail .nextbtn .btn_lg{margin-top:0px}
+	.jobdetail .jobleft ul li{width: 97%}
+	.jobdetail ul.jobtab li.active:last-child a::after{display:none}
+		/*..14.4.18..*/
+	.newrequest ul li:nth-child(2n+1){padding-left:15px;}
+	.newrequest ul li:nth-child(2n){padding-right:15px;}
+	.newrequest ul li{width:100%}
+	.newrequest ul li .rqstmain{margin:15px 0}
+	.stj_bid_wrap {  padding: 20px;}
+	.stj_bid_top .stj_bdt_lft .stj_bid_slider {margin-bottom: 15px;  width: 100%;}
+	.stj_bid_top .stj_bdt_lft .stj_bid_side_con { margin-bottom: 15px;  width: 100%;}
+	.bid_table table th {  font-size: 10px; padding: 4px 5px;}
+	.bid_table table td {  font-size: 10px;padding: 4px 5px;}
+	.bid_table {  overflow: auto;}
+	.bpw_inner ul li .txt_pop {  margin-bottom: 10px; width: 100%;}
+	.bpw_inner ul li .sd_dtl {  width: 100%;}
+	
+}
+
+@media (max-width: 639px) {  
+}
+	
+
+@media (max-width: 479px) {  
+}
+
+

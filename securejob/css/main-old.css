@@ -1,0 +1,42 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+img{border:none !important;outline:none;max-width:100%;}
+a{transition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none;outline:none;color:black;}
+a:hover, a:focus{ outline:none; text-decoration:none; color: #e10000;}
+input{font-family: 'Fira Sans';transition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none;outline:none;-webkit-appearance:none;border:none;}
+/*select::-ms-expand{display:none;}*/
+select:focus{ outline:none; border:none;}
+button{font-family: 'Fira Sans';cursor:pointer;transition:all 0.4s ease 0s;-webkit-transition:all 0.4s ease 0s;text-decoration:none;outline:none;-webkit-appearance:none;border:none;}
+select{font-family: 'Fira Sans';}
+textarea{outline:none !important;font-family: 'Fira Sans';}
+ul li{list-style:none;}
+input[type="checkbox"]{-webkit-appearance:checkbox;}
+input[type="radio"]{-webkit-appearance:radio;}
+.lines-button{display:none;}
+.main{ margin:0 auto; max-width:1420px; padding:0 10px;}
+body{background: #fe730e;font-family: 'Fira Sans'; background: -webkit-linear-gradient(right top, #fe730e, #ffd430); background: -o-linear-gradient(bottom left, #fe730e, #ffd430); background: -moz-linear-gradient(bottom left, #fe730e, #ffd430);  background: linear-gradient(to bottom left, #fe730e, #ffd430);}
+.wc_header{float:left; width: 100%; background: #248bcb; padding: 10px; position: relative;}
+.wc_header .a_bk{position: absolute; left: 10px; top:12px; z-index: 99;}
+.wc_header .a_bk img{width:10px;}
+.wc_header h2{ text-align: center; float: left; width: 100%; color: #fff; font-size: 18px; font-weight: normal;}
+.amount_wrap{float:left; width: 100%; box-shadow: 0 0 10px 0 #333; margin-bottom: 10px; padding:10px 10px; text-align: center;}
+.amount_wrap h3{text-align: center; float: left; width: 100%; color: #fff; margin-bottom: 5px; font-size: 18px; font-weight: normal;}
+.amount_wrap p{text-align: center; float: left; width: 100%; color: #fff; font-size: 26px; font-weight: bold;}
+.pymt_wrap{float:left; width: 100%; text-align: center;}
+.pymt_wrap h2{text-align: center; margin: 10px 0; float: left; width: 100%; color: #fff; font-size: 24px; font-weight: normal;}
+.pymt_wrap .tab_pt{float:left; margin-bottom: 20px; width: 100%;border-top:1px solid #fff;border-bottom:1px solid #fff;}
+.pymt_wrap .tab_pt li{float:left; width: 33.33%;}
+.pymt_wrap .tab_pt li a{float:left;background: #248BCB; width: 100%; font-size: 14px; text-align: center; color:#fff;border-right:1px solid #fff; padding: 5px;}
+.pymt_wrap .tab_pt li a:hover, .pymt_wrap .tab_pt li.active a{background: #333;}
+.pymt_wrap .tab_pt li:last-child a{ border-right:none;}
+.pymt_wrap .pymt_form{float:none ;width: 300px;min-height: 548px;background: url(../images/bg.png) no-repeat left top; background-size:100% auto; padding:40px 20px; display: inline-block;}
+.pymt_wrap .pymt_form ul{float:left; width: 100%; }
+.pymt_wrap .pymt_form ul li{float:left; width: 100%; margin-bottom: 15px; text-align: left;}
+.pymt_wrap .pymt_form ul li label{float:left; width: 100%; font-size: 14px; text-transform: uppercase;color: #333333; margin-bottom:7px;}
+.pymt_wrap .pymt_form ul li .txt_pt{float:left ; height: 40px;width: 100%; border: none; border-bottom: 1px solid #000; font-size: 14px; color:#1c81c4; padding: 5px 10px 5px 5px;}
+.pymt_wrap .pymt_form ul li select{float:left ;width: 100%; height: 40px; border: none; border-bottom: 1px solid #000; font-size: 14px; color:#1c81c4; padding: 5px; -moz-appearance:none;-webkit-appearance:none; background: #fff url(../images/arr6.png) no-repeat right center;}
+.pymt_wrap .pymt_form ul li select option{padding: 5px;}
+.pymt_wrap .pymt_form ul li select.half_sel{float:left; width: 48%; margin-right: 2%;}
+.pymt_wrap .pymt_form ul li.lft_li{width:50%;}
+.pymt_wrap .pymt_form ul li.rgt_li{width:60px; float:right;}
+.pymt_wrap .pymt_form ul li.btn_li .btn_pt{display: inline-block; width: 200px; height: 40px; background: url(../images/btn-bg.png) no-repeat center center; font-size: 18px; padding-top: 2px; cursor: pointer;font-weight: bold; text-transform: uppercase; color: #fff;}
+.pymt_wrap .pymt_form ul li.btn_li{text-align: center;}

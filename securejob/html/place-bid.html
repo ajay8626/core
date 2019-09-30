@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#cf2027">
+<meta name="msapplication-navbutton-color" content="#cf2027">
+<meta name="apple-mobile-web-app-status-bar-style" content="#cf2027">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<title>SECURE THAT JOB</title>
+
+<!-- Bootstrap -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,500,600,700,800" rel="stylesheet"> 
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/ddsmoothmenu.css" rel="stylesheet">
+<link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+<link href="css/jquery.fancybox.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="fonts/font-awesome.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="js/at-jquery.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+     
+		$(".a_bid_pop").fancybox();
+		
+      var sync1 = $("#sync1");
+      var sync2 = $("#sync2");
+     
+      sync1.owlCarousel({
+        singleItem : true,
+        slideSpeed : 1000,
+        navigation: false,
+        pagination:false,
+        afterAction : syncPosition,
+        responsiveRefreshRate : 200,
+      });
+     
+      sync2.owlCarousel({
+        items : 5,
+        itemsDesktop      : [1199,5],
+        itemsDesktopSmall     : [979,3],
+        itemsTablet       : [768,3],
+        itemsMobile       : [479,3],
+        pagination:false,
+        responsiveRefreshRate : 100,
+        afterInit : function(el){
+          el.find(".owl-item").eq(0).addClass("synced");
+        }
+      });
+     
+      function syncPosition(el){
+        var current = this.currentItem;
+        $("#sync2")
+          .find(".owl-item")
+          .removeClass("synced")
+          .eq(current)
+          .addClass("synced")
+        if($("#sync2").data("owlCarousel") !== undefined){
+          center(current)
+        }
+      }
+     
+      $("#sync2").on("click", ".owl-item", function(e){
+        e.preventDefault();
+        var number = $(this).data("owlItem");
+        sync1.trigger("owl.goTo",number);
+      });
+     
+      function center(number){
+        var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
+        var num = number;
+        var found = false;
+        for(var i in sync2visible){
+          if(num === sync2visible[i]){
+            var found = true;
+          }
+        }
+     
+        if(found===false){
+          if(num>sync2visible[sync2visible.length-1]){
+            sync2.trigger("owl.goTo", num - sync2visible.length+2)
+          }else{
+            if(num - 1 === -1){
+              num = 0;
+            }
+            sync2.trigger("owl.goTo", num);
+          }
+        } else if(num === sync2visible[sync2visible.length-1]){
+          sync2.trigger("owl.goTo", sync2visible[1])
+        } else if(num === sync2visible[0]){
+          sync2.trigger("owl.goTo", num-1)
+        }
+        
+      }
+     
+    });
+
+	
+</script>
+</head>
+<body>
+<div class="header inner_header">
+  <div class="container"> 
+      <div class="logo"><a href="#"><img class="img-responsive" src="images/logo.png"></a></div>
+      <div class="navigation"> <a href="#" class="lines-button x2"><span class="lines"></span></a>
+        <div class="main_menu">
+          <ul class="firstul">
+           <li class="current_page_item"><a href="#">Home</a></li>
+            <li><a href="#">Search jobs</a></li>
+            <li><a href="#">post jobs</a>
+              <ul>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu1</a>
+                  <ul>
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu1</a></li>
+                    <li><a href="#">submenu1</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu1</a></li>
+              </ul>
+            </li>
+            <li><a href="#">courses</a></li>
+          </ul>
+        </div>
+        <div class="loginlik"><a href="#">Login/Register</a></div>
+        <div class="selectdrpdwn">
+        	<select>
+        		<option>EN</option>
+        		<option>FR</option>        		
+        	</select> 
+        </div>
+      </div> 
+  </div>
+</div>
+
+<div class="stj_abt_wrap">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-xs-12 col-md-10 stj_bid">
+				<div class="stj_bid_wrap">
+					
+					<div class="stj_bid_top">
+						<div class="stj_bdt_lft">
+							<div class="stj_bid_slider">
+								<div id="sync1" class="owl-carousel">
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd.jpg" alt=""/></div>
+								</div>
+								<div id="sync2" class="owl-carousel">
+									<div class="item"><img src="images/bd1.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd2.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd3.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd4.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd5.jpg" alt=""/></div>
+									<div class="item"><img src="images/bd1.jpg" alt=""/></div>
+								</div>
+							</div>
+							<div class="stj_bid_side_con">
+								<h2>School Security Guard</h2>
+								<h5>(Manned Guarding)</h5>
+								<div class="stj_bid_rating">
+									<label>Job Poster’s Ratings:</label>
+									<ul>
+										<li><img src="images/star.png" alt=""/></li>
+										<li><img src="images/star.png" alt=""/></li>
+										<li><img src="images/star.png" alt=""/></li>
+										<li><img src="images/star.png" alt=""/></li>
+										<li><img src="images/star-tr.png" alt=""/></li>
+									</ul>
+								</div>
+								<hr>
+								<h3>Amount Willing to pay</h3>
+								<div class="price">£40000</div>
+								<div class="price_hrs">2000 Hours @ £20 Per Hour</div>
+								<div class="bid_btn">
+									<a class="a_bid_pop" href="#bid_id">Place your bid</a>
+								</div>
+								<div style="display: none;">
+									<div class="bid_pop_wrap" id="bid_id">
+										<h2>Place Your Bid</h2>
+										<div class="bpw_inner">
+											<h4>Please choose desired did for the job. You can submit a different bid, lower or higher then the advertised budget</h4>
+											<ul>
+												<li>
+													<label>Your Bid Amount:<em>*£</em></label>
+													<input type="text" class="txt_pop" />
+													<span class="sd_dtl">(Per Person Per hour)</span>
+												</li>
+												<li>
+													<label>Bidding For:<em>*</em></label>
+													<input type="text" class="txt_pop" />
+													<span class="sd_dtl">Person(s)</span>
+												</li>
+												<li class="algn_cntr"><p>By Clicking the submit offer button, you will commit to carrying out the job, if chosen as winner by the job listings owner, and also you agree to our <a href="#">Terms and Conditions</a></p></li>
+												<li class="algn_cntr">
+													<input type="submit" value="Submit your offer" class="btn_pop" />
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="stj_bdt_rgt">
+							<ul>
+								<li>Duration: <span>5 Days (8 hours per day)</span></li>
+								<li>Start Date: <span>12/01/2018</span></li>
+								<li>Risk Meter: <span>Low</span></li>
+								<li>Nearest Transport Link: <span>Lorem ipsum</span></li>
+								<li>Dress Code: <span>Lorem ipsum</span></li>
+							</ul>
+							<div class="stj_bdt_rgt_iframe">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.03027831211!2d-0.10748848403356334!3d51.62265451009037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487619379d2859c7%3A0xcf88fa1283d62bf4!2s483+Green+Lanes%2C+London+N13+4BS%2C+UK!5e0!3m2!1sen!2sin!4v1520229738490" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+						<div class="stj_bid_descp">
+							<h2>Description</h2>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						</div>
+					</div>
+					
+					<div class="stj_bid_btm">
+						<h2>View Bidding Details Below</h2>
+						<ul>
+							<li>Opening Positions: <span>50</span></li>
+							<li>Filled Positions: <span>11</span></li>
+							<li>Vacant Positions: <span>39</span></li>
+						</ul>
+						<div class="bid_table">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<th>Bidders</th>
+									<th>Date</th>
+									<th>BidAmount<span>(Per Pr. Per Hr)</span></th>
+									<th>No. Of Persons</th>
+									<th>Total Amount</th>
+									<th>Winner</th>
+									<th></th>
+								</tr>
+								<tr>
+									<td><a href="#">User 1</a></td>
+									<td>01/03/2018</td>
+									<td>20</td>
+									<td>20</td>
+									<td>15000</td>
+									<td></td>
+									<td>
+										<ul>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star-tr.png" alt=""/></li>
+									    </ul>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="#">User 1</a></td>
+									<td>01/03/2018</td>
+									<td>20</td>
+									<td>20</td>
+									<td>15000</td>
+									<td></td>
+									<td>
+										<ul>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star-tr.png" alt=""/></li>
+									    </ul>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="#">User 1</a></td>
+									<td>01/03/2018</td>
+									<td>20</td>
+									<td>20</td>
+									<td>15000</td>
+									<td></td>
+									<td>
+										<ul>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star-tr.png" alt=""/></li>
+									    </ul>
+									</td>
+								</tr>
+								<tr>
+									<td><a href="#">Your bid</a></td>
+									<td>01/03/2018</td>
+									<td>20</td>
+									<td>20</td>
+									<td>15000</td>
+									<td></td>
+									<td>
+										<ul>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star.png" alt=""/></li>
+										   <li><img src="images/star-tr.png" alt=""/></li>
+									    </ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="col-xs-12 col-md-2 stj_brc">
+				<ul>
+					<li><a href="#"><img src="images/brc1.jpg" alt=""/></a></li>
+					<li><a href="#"><img src="images/brc2.jpg" alt=""/></a></li>
+					<li><a href="#"><img src="images/brc3.jpg" alt=""/></a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+</div>
+ 
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+       <div class="flogo"><img src="images/footerlogo.png" alt=""/></div>
+      </div>
+      <div class="col-md-9">
+        <div class="footermenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search jobs</a></li>
+            <li><a href="#">post jobs</a></li>
+            <li><a href="#">courses</a></li>
+            <li><a href="#">Login/Register</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="copyright">(c) 2018 <a href="#">Securethatjob.com</a> | Web Development by <a href="#">MGT Design</a></div>
+        <div class="social">
+        	<a href="#"><i class="fa fa-facebook"></i></a>
+        	<a href="#"><i class="fa fa-twitter"></i></a>
+        	<a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</body>
+</html>

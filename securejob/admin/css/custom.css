@@ -1,0 +1,48 @@
+.error {
+  background: #dd4b39 none repeat scroll 0 0;
+  color: #fff;
+  float: left;
+  margin: 10px 2%;
+  padding: 4px 10px;
+  width: 96%;
+}
+.childCheck {
+  float: left;
+  padding: 10px;
+  width: 100%;
+  display:none;
+}
+.childCheck label {
+  float: left;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/*dilip changes*/
+.box-body table{
+  text-align: center;
+}
+.table-bordered > thead > tr > th{
+  text-align: center;
+}
+/*dilip changes*/
+
+
+.box-body > .table td, .box-body > .table th {
+  width: 30% !important;
+}
+.box-body > .table td:nth-child(3), .box-body > .table th:nth-child(3) {
+  text-align: right !important;
+}
+.box-body > .table td:nth-child(4), .box-body > .table th:nth-child(4) {
+  text-align: right !important;
+}
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a {
+    background: #fff none repeat scroll 0 0 !important; 
+    border-left-color: #505677 !important;
+    color: #505677 !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd):hover{background:rgba(0,0,0,0.1);}
+.table-striped>tbody>tr:nth-of-type(even):hover{background:#eeeeee;}

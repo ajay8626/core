@@ -1,0 +1,5 @@
+ALTER TABLE `tbluser` ADD `last_login` DATE NULL DEFAULT NULL AFTER `verification_code`, ADD `last_logout` DATE NULL DEFAULT NULL AFTER `last_login`;
+
+ALTER TABLE `tbluser` CHANGE `last_login` `last_login` DATETIME NULL DEFAULT NULL;
+
+ALTER TABLE `tbluser` CHANGE `last_logout` `last_logout` DATETIME NULL DEFAULT NULL;
